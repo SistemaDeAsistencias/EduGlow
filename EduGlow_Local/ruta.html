@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruta de aprendizaje — EduGlow</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="ruta">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal">
+      <a href="index.html" data-pagina="inicio">Inicio</a>
+      <a href="explorar.html" data-pagina="explorar">Mentores</a>
+      <a href="index.html#rutas">Rutas</a>
+    </nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<main class="seccion">
+  <div class="contenedor" id="contenido-ruta">
+    <div class="cargando">Cargando ruta...</div>
+  </div>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="pie-inferior">
+      <span>© 2026 EduGlow. Proyecto academico.</span>
+      <span><a href="index.html#rutas" style="color:inherit;">Volver a rutas</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/rutas.js"></script>
+</body>
+</html>

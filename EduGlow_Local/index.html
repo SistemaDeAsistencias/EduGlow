@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduGlow — Orientacion y mentoria para tu camino profesional</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="inicio">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal">
+      <a href="index.html" data-pagina="inicio">Inicio</a>
+      <a href="explorar.html" data-pagina="explorar">Mentores</a>
+      <a href="index.html#rutas">Rutas</a>
+      <a href="index.html#beneficios">Beneficios</a>
+    </nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="contenedor">
+    <div>
+      <p class="hero-eyebrow">Mentoria academica y profesional</p>
+      <h1>Encuentra la luz que guie <em>tu proximo paso</em></h1>
+      <p class="lead">EduGlow conecta a estudiantes con mentores reales para trazar rutas de aprendizaje claras, resolver dudas de carrera y avanzar con acompanamiento genuino.</p>
+      <div class="hero-acciones">
+        <a href="registro.html" class="boton boton-glow">Crear cuenta gratis</a>
+        <a href="explorar.html" class="boton boton-fantasma">Explorar mentores</a>
+      </div>
+    </div>
+    <div class="hero-senda">
+      <svg class="senda-svg" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40 340 C 120 340, 90 230, 170 220 S 260 120, 220 70 S 340 30, 380 40" fill="none" stroke="rgba(255,209,102,0.35)" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"/>
+        <circle cx="40" cy="340" r="9" fill="#F2A93B"/>
+        <circle cx="170" cy="220" r="7" fill="#FFD166"/>
+        <circle cx="220" cy="70" r="7" fill="#FFD166"/>
+        <circle cx="380" cy="40" r="10" fill="#3FA796"/>
+        <text x="55" y="345" fill="#EDEFF7" font-family="Sora, sans-serif" font-size="13">Empiezas aqui</text>
+        <text x="185" y="212" fill="#EDEFF7" font-family="Sora, sans-serif" font-size="13">Primera mentoria</text>
+        <text x="228" y="62" fill="#EDEFF7" font-family="Sora, sans-serif" font-size="13">Ruta completada</text>
+        <text x="330" y="65" fill="#EDEFF7" font-family="Sora, sans-serif" font-size="13">Tu meta</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="mentores">
+  <div class="contenedor">
+    <div class="seccion-cabecera">
+      <div>
+        <h2>Mentores destacados</h2>
+        <p>Profesionales activos en la industria, listos para orientarte.</p>
+      </div>
+      <a href="explorar.html" class="boton boton-linea">Ver todos</a>
+    </div>
+    <div class="rejilla rejilla-3" id="lista-mentores-destacados">
+      <div class="cargando">Cargando mentores...</div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion seccion-alt" id="rutas">
+  <div class="contenedor">
+    <div class="seccion-cabecera">
+      <div>
+        <h2>Rutas de aprendizaje destacadas</h2>
+        <p>Itinerarios estructurados para avanzar paso a paso.</p>
+      </div>
+      <a href="registro.html" class="boton boton-linea">Empezar una ruta</a>
+    </div>
+    <div class="rejilla rejilla-3" id="lista-rutas-destacadas">
+      <div class="cargando">Cargando rutas...</div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion" id="beneficios">
+  <div class="contenedor">
+    <div class="seccion-cabecera">
+      <div>
+        <h2>Por que EduGlow</h2>
+        <p>Una plataforma pensada para el acompanamiento real, no solo contenido.</p>
+      </div>
+    </div>
+    <div class="rejilla rejilla-4">
+      <div class="beneficio">
+        <div class="beneficio-icono">🎯</div>
+        <div><h3>Mentoria 1 a 1</h3><p>Sesiones agendadas directamente con el mentor que elijas.</p></div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">🧭</div>
+        <div><h3>Rutas claras</h3><p>Itinerarios con objetivos y progreso medible.</p></div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">🏅</div>
+        <div><h3>Credenciales</h3><p>Recibe una credencial digital al completar una ruta.</p></div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icono">✨</div>
+        <div><h3>Recomendaciones</h3><p>Sugerencias de rutas y mentores segun tu avance.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="seccion franja-ink texto-centro">
+  <div class="contenedor">
+    <h2>Tu proximo mentor te esta esperando</h2>
+    <p style="margin: 0 auto 1.5rem;">Crea tu cuenta y agenda tu primera sesion hoy mismo.</p>
+    <a href="registro.html" class="boton boton-glow">Registrarme ahora</a>
+  </div>
+</section>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="rejilla rejilla-4">
+      <div>
+        <h4>EduGlow</h4>
+        <p style="color: rgba(237,239,247,.65); font-size: .88rem; max-width: 26ch;">Orientacion y mentoria academica y profesional para avanzar con claridad.</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <a href="explorar.html">Explorar mentores</a>
+        <a href="index.html#rutas">Rutas de aprendizaje</a>
+        <a href="registro.html">Crear cuenta</a>
+      </div>
+      <div>
+        <h4>Cuenta</h4>
+        <a href="login.html">Iniciar sesion</a>
+        <a href="dashboard.html">Mi panel</a>
+        <a href="perfil.html">Mi perfil</a>
+      </div>
+      <div>
+        <h4>Soporte</h4>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+    <div class="pie-inferior">
+      <span>© 2026 EduGlow. Proyecto academico.</span>
+      <span>Hecho para acompanar tu camino de aprendizaje.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>

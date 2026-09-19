@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis reservas — EduGlow</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="reservas">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal"></nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<div class="app-shell">
+  <aside class="barra-lateral">
+    <a href="dashboard.html" data-pagina="dashboard">🏠 Panel</a>
+    <a href="explorar.html" data-pagina="explorar">🔍 Explorar mentores</a>
+    <a href="reservas.html" data-pagina="reservas">📅 Mis reservas</a>
+    <a href="perfil.html" data-pagina="perfil">👤 Mi perfil</a>
+    <a href="admin.html" data-pagina="admin" id="enlace-admin" class="oculto">🛠️ Panel admin</a>
+    <a href="#" data-accion="cerrar-sesion">🚪 Cerrar sesion</a>
+  </aside>
+
+  <main class="contenido-app">
+    <div class="encabezado-pagina">
+      <div>
+        <h2>Mis reservas</h2>
+        <p class="saludo">Consulta, modifica o cancela tus sesiones agendadas.</p>
+      </div>
+    </div>
+
+    <div id="lista-reservas">
+      <div class="cargando">Cargando reservas...</div>
+    </div>
+  </main>
+</div>
+
+<!-- Modal simple para reprogramar -->
+<div class="oculto" id="modal-reprogramar" style="position:fixed; inset:0; background:rgba(20,33,61,.55); display:flex; align-items:center; justify-content:center; z-index:150;">
+  <div class="tarjeta" style="width:min(420px, 90vw);">
+    <h3>Reprogramar sesion</h3>
+    <div class="mensaje-formulario" id="mensaje-reprogramar"></div>
+    <form id="form-reprogramar">
+      <input type="hidden" id="reprogramar-id">
+      <div class="campo-fila">
+        <div class="campo">
+          <label for="reprogramar-fecha">Nueva fecha</label>
+          <input type="date" id="reprogramar-fecha" required>
+        </div>
+        <div class="campo">
+          <label for="reprogramar-hora">Nueva hora</label>
+          <input type="time" id="reprogramar-hora" required>
+        </div>
+      </div>
+      <div class="flex-entre mt-1">
+        <button type="button" class="boton boton-linea" id="boton-cerrar-modal">Cancelar</button>
+        <button type="submit" class="boton boton-glow">Guardar cambios</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/reservas.js"></script>
+</body>
+</html>

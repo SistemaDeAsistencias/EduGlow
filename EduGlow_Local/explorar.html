@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorar mentores — EduGlow</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="explorar">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal">
+      <a href="index.html" data-pagina="inicio">Inicio</a>
+      <a href="explorar.html" data-pagina="explorar">Mentores</a>
+      <a href="index.html#rutas">Rutas</a>
+    </nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<main class="seccion">
+  <div class="contenedor">
+    <div class="seccion-cabecera">
+      <div>
+        <h2>Explorar mentores</h2>
+        <p>Busca por nombre, filtra por especialidad y experiencia.</p>
+      </div>
+    </div>
+
+    <form class="barra-filtros" id="form-filtros">
+      <div class="campo">
+        <label for="busqueda">Buscar por nombre</label>
+        <input type="text" id="busqueda" placeholder="Ej: Carlos">
+      </div>
+      <div class="campo">
+        <label for="especialidad">Especialidad</label>
+        <select id="especialidad">
+          <option value="">Todas</option>
+          <option value="Desarrollo Web">Desarrollo Web</option>
+          <option value="Ciencia de Datos">Ciencia de Datos</option>
+          <option value="Diseno UX/UI">Diseno UX/UI</option>
+          <option value="Marketing Digital">Marketing Digital</option>
+          <option value="Emprendimiento">Emprendimiento</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="experiencia">Experiencia minima (anios)</label>
+        <input type="number" id="experiencia" min="0" placeholder="0">
+      </div>
+      <div class="campo">
+        <label for="orden">Ordenar por</label>
+        <select id="orden">
+          <option value="calificacion">Mejor calificados</option>
+          <option value="experiencia">Mas experiencia</option>
+          <option value="tarifa_asc">Tarifa: menor a mayor</option>
+          <option value="tarifa_desc">Tarifa: mayor a menor</option>
+          <option value="nombre">Nombre (A-Z)</option>
+        </select>
+      </div>
+      <button type="submit" class="boton boton-glow">Buscar</button>
+    </form>
+
+    <div class="rejilla rejilla-3" id="lista-mentores">
+      <div class="cargando">Cargando mentores...</div>
+    </div>
+  </div>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="pie-inferior">
+      <span>© 2026 EduGlow. Proyecto academico.</span>
+      <span><a href="index.html" style="color:inherit;">Volver al inicio</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/mentores.js"></script>
+</body>
+</html>

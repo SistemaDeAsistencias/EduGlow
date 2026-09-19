@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel administrativo — EduGlow</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="admin">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal"></nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<div class="app-shell">
+  <aside class="barra-lateral">
+    <a href="dashboard.html" data-pagina="dashboard">🏠 Panel</a>
+    <a href="explorar.html" data-pagina="explorar">🔍 Explorar mentores</a>
+    <a href="reservas.html" data-pagina="reservas">📅 Mis reservas</a>
+    <a href="perfil.html" data-pagina="perfil">👤 Mi perfil</a>
+    <a href="admin.html" data-pagina="admin" class="activo">🛠️ Panel admin</a>
+    <a href="#" data-accion="cerrar-sesion">🚪 Cerrar sesion</a>
+  </aside>
+
+  <main class="contenido-app">
+    <div class="encabezado-pagina">
+      <div>
+        <h2>Panel administrativo</h2>
+        <p class="saludo">Administra usuarios, mentores, rutas y reservas de EduGlow.</p>
+      </div>
+    </div>
+
+    <div class="rejilla rejilla-4" id="tarjetas-estadisticas">
+      <div class="cargando">Cargando estadisticas...</div>
+    </div>
+
+    <div class="pestanas mt-2">
+      <button class="activo" data-tab="usuarios">Usuarios</button>
+      <button data-tab="mentores">Mentores</button>
+      <button data-tab="rutas">Rutas</button>
+      <button data-tab="reservas">Reservas</button>
+    </div>
+
+    <!-- ---------------- Usuarios ---------------- -->
+    <section class="panel-tab" data-panel="usuarios">
+      <div class="barra-filtros">
+        <div class="campo">
+          <label for="filtro-usuario-busqueda">Buscar</label>
+          <input type="text" id="filtro-usuario-busqueda" placeholder="Nombre o correo">
+        </div>
+        <div class="campo">
+          <label for="filtro-usuario-rol">Rol</label>
+          <select id="filtro-usuario-rol">
+            <option value="">Todos</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="mentor">Mentor</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <button class="boton boton-glow" id="boton-filtrar-usuarios">Filtrar</button>
+      </div>
+      <div id="tabla-usuarios"><div class="cargando">Cargando usuarios...</div></div>
+    </section>
+
+    <!-- ---------------- Mentores ---------------- -->
+    <section class="panel-tab oculto" data-panel="mentores">
+      <div class="flex-entre mt-1" style="margin-bottom:1rem;">
+        <p style="margin:0;">Crea y administra los perfiles de mentores.</p>
+        <button class="boton boton-glow boton-pequeno" id="boton-nuevo-mentor">+ Nuevo mentor</button>
+      </div>
+      <div id="tabla-mentores"><div class="cargando">Cargando mentores...</div></div>
+    </section>
+
+    <!-- ---------------- Rutas ---------------- -->
+    <section class="panel-tab oculto" data-panel="rutas">
+      <div class="flex-entre mt-1" style="margin-bottom:1rem;">
+        <p style="margin:0;">Crea y administra las rutas de aprendizaje.</p>
+        <button class="boton boton-glow boton-pequeno" id="boton-nueva-ruta">+ Nueva ruta</button>
+      </div>
+      <div id="tabla-rutas"><div class="cargando">Cargando rutas...</div></div>
+    </section>
+
+    <!-- ---------------- Reservas ---------------- -->
+    <section class="panel-tab oculto" data-panel="reservas">
+      <div class="barra-filtros">
+        <div class="campo">
+          <label for="filtro-reserva-estado">Estado</label>
+          <select id="filtro-reserva-estado">
+            <option value="">Todos</option>
+            <option value="pendiente">Pendiente</option>
+            <option value="confirmada">Confirmada</option>
+            <option value="cancelada">Cancelada</option>
+            <option value="completada">Completada</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="filtro-reserva-fecha">Fecha</label>
+          <input type="date" id="filtro-reserva-fecha">
+        </div>
+        <button class="boton boton-glow" id="boton-filtrar-reservas">Filtrar</button>
+      </div>
+      <div id="tabla-reservas"><div class="cargando">Cargando reservas...</div></div>
+    </section>
+  </main>
+</div>
+
+<!-- Modal generico -->
+<div class="oculto" id="modal-admin" style="position:fixed; inset:0; background:rgba(20,33,61,.55); display:flex; align-items:center; justify-content:center; z-index:150;">
+  <div class="tarjeta" style="width:min(480px, 92vw); max-height:88vh; overflow:auto;" id="modal-admin-contenido"></div>
+</div>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

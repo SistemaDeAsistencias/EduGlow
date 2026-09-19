@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil del mentor — EduGlow</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-pagina="mentor">
+
+<header class="encabezado">
+  <div class="contenedor">
+    <a href="index.html" class="marca"><span class="punto-glow"></span> EduGlow</a>
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="nav-principal">
+      <a href="index.html" data-pagina="inicio">Inicio</a>
+      <a href="explorar.html" data-pagina="explorar">Mentores</a>
+      <a href="index.html#rutas">Rutas</a>
+    </nav>
+    <div class="nav-acciones" data-zona-auth></div>
+  </div>
+</header>
+
+<main class="seccion">
+  <div class="contenedor" id="contenido-mentor">
+    <div class="cargando">Cargando perfil del mentor...</div>
+  </div>
+</main>
+
+<footer class="pie-pagina">
+  <div class="contenedor">
+    <div class="pie-inferior">
+      <span>© 2026 EduGlow. Proyecto academico.</span>
+      <span><a href="explorar.html" style="color:inherit;">Volver a mentores</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/db-local.js"></script>
+<script src="js/api.js"></script>
+<script src="js/common.js"></script>
+<script src="js/mentores.js"></script>
+</body>
+</html>
